@@ -1,8 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import Home from './components/Home/Home';
 import registerServiceWorker from './registerServiceWorker';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+<BrowserRouter>
+    <Switch>
+        <Route path="/" component={ Home } />
+    </Switch>
+</BrowserRouter>, 
+document.getElementById('root'));
 registerServiceWorker();
