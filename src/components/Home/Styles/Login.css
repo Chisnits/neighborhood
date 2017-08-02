@@ -1,0 +1,8 @@
+.login-wrapper{
+    height: 20vh;
+    width: 32%;
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
