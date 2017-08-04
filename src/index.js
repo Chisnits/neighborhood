@@ -12,7 +12,7 @@ ReactDOM.render(
     <div>
         <Route component={ Header } />
             <Switch>
-                 <Route exact path="/" component={ Home } /> 
+                <Route exact path="/" component={ Home } /> 
                 <Route path="/directory" component={ Directory } />
                 <Route path="/calender" component={ Calender } />
             </Switch>
