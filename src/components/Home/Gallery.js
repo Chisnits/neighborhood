@@ -4,42 +4,41 @@ import "./Styles/Gallery.css"
 class Gallery extends Component {
   constructor(props){
     super(props);
-
-    this.handleClick = this.handleClick.bind(this);
+    this.state = {
+      active: false,
+    };
     // this.toggleOpen = this.toggleOpen.bind(this);
   }
     
-   handleClick(){
-    console.log('hello')
-    //   this.classList.toggle('open');
-   }
-    
-
-
-
     render() {
        
 const panels = document.querySelectorAll('.panel');
 
+console.log(this.state);
+
     function toggleOpen() {
-      console.log('hello')
-      this.classList.toggle('open');
+      // console.log('hello')
+      // console.log(e.target.className);
+      // this.classList.toggle('open');
+       const currentState = this.state.active;
+        this.setState({ active: !currentState });
+      const cool = 'Chase';
     }
 
-    function toggleActive(e) {
-      console.log(e.propertyName);
-      if (e.propertyName.includes('flex')) {
-        this.classList.toggle('open-active');
-      }
-    }
+    // function toggleActive(e) {
+    //   console.log(e.propertyName);
+    //   if (e.propertyName.includes('flex')) {
+    //     this.classList.toggle('open-active');
+    //   }
+    // }
 
     panels.forEach(panel => panel.addEventListener('click', toggleOpen));
-    panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+    // panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
 
         return (
             
           <div className="panels">
-            <div className="panel panel1">
+            <div className="this.state.active ? 'panel panel1 panel.open' || panel panel1" onClick={ toggleOpen } >
               <p>Hey</p>
               <p>Let's</p>
               <p>Dance</p>
