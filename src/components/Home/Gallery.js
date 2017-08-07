@@ -22,7 +22,6 @@ console.log(this.state);
       // this.classList.toggle('open');
        const currentState = this.state.active;
         this.setState({ active: !currentState });
-      const cool = 'Chase';
     }
 
     // function toggleActive(e) {
