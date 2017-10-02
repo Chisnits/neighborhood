@@ -5,24 +5,32 @@ class Gallery extends Component {
   constructor(props){
     super(props);
     this.state = {
-      active: false,
+      open: false,
     };
-    // this.toggleOpen = this.toggleOpen.bind(this);
+    this.toggleOpen = this.toggleOpen.bind(this);
   }
-    
+  toggleOpen(e) {
+    console.log(e.target.className)
+    console.log(e.propertyName)
+    if(e.target.className === 'panel panel1' || 'open'){
+      this.refs.panel1.classList.toggle('open')
+    }
+    if(e.target.className === 'panel panel2'){
+      this.refs.panel2.classList.toggle('open')
+    }
+    if(e.target.className === 'panel panel3'){
+      this.refs.panel3.classList.toggle('open')
+    }
+    if(e.target.className === 'panel panel4'){
+      this.refs.panel4.classList.toggle('open')
+    }
+    if(e.target.className === 'panel panel5'){
+      this.refs.panel5.classList.toggle('open')
+    }
+  }
     render() {
        
 const panels = document.querySelectorAll('.panel');
-
-console.log(this.state);
-
-    function toggleOpen() {
-      // console.log('hello')
-      // console.log(e.target.className);
-      // this.classList.toggle('open');
-       const currentState = this.state.active;
-        this.setState({ active: !currentState });
-    }
 
     // function toggleActive(e) {
     //   console.log(e.propertyName);
@@ -30,34 +38,30 @@ console.log(this.state);
     //     this.classList.toggle('open-active');
     //   }
     // }
-
-    panels.forEach(panel => panel.addEventListener('click', toggleOpen));
-    // panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
-
         return (
             
           <div className="panels">
-            <div className="this.state.active ? 'panel panel1 panel.open' || panel panel1" onClick={ toggleOpen } >
+            <div ref="panel1" className="panel panel1" onClick={ this.toggleOpen } >
               <p>Hey</p>
               <p>Let's</p>
               <p>Dance</p>
             </div>
-            <div className="panel panel2">
+            <div ref="panel2" className="panel panel2" onClick={ this.toggleOpen }>
               <p>Give</p>
               <p>Take</p>
               <p>Receive</p>
             </div>
-            <div className="panel panel3">
+            <div ref="panel3" className="panel panel3" onClick={ this.toggleOpen }>
               <p>Experience</p>
               <p>It</p>
               <p>Today</p>
             </div>
-            <div className="panel panel4">
+            <div ref="panel4" className="panel panel4" onClick={ this.toggleOpen }>
               <p>Give</p>
               <p>All</p>
               <p>You can</p>
             </div>
-            <div className="panel panel5">
+            <div ref="panel5" className="panel panel5" onClick={ this.toggleOpen }>
               <p>Life</p>
               <p>In</p>
               <p>Motion</p>

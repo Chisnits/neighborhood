@@ -1,0 +1,26 @@
+.wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+.event-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    width: 25vw;
+    border: 1px solid black;
+}
+.event-list-container{
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.event-date{
+    height: 100%;
+    width: 7vw;
+    background-color: #448aff;
+}
