@@ -18,6 +18,7 @@ class Login extends Component {
         this.handlePassword = this.handlePassword.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleLogin = this.handleLogin.bind(this)
+        this.handleLogout = this.handleLogout.bind(this)
     }
 
     handleEmail(e) {
@@ -37,7 +38,7 @@ class Login extends Component {
             checkEmails.push(item.email)
             checkEmails.push(item.email2)
         })
-        if (_.contains(checkEmails, this.state.email)&& this.state.password === 'hickoryRidge'){
+        if (_.contains(checkEmails, this.state.email)&& this.state.password === 'hr2017'){
             this.handleLogin()
         } else {
             alert("Invalid login Information")
@@ -51,24 +52,37 @@ class Login extends Component {
         this.setState({
             isAuthed: true
         })
-        // var displayHeader = document.querySelector("#header");
-        // displayHeader.classList.add("enableHeader");
-        // document.getElementById("header").className = "display: 'block'";
+        var displayHeader = document.querySelector("#header");
+        displayHeader.classList.add("enableHeader");
+    }
+    handleLogout(){
+        this.setState({
+            isAuthed: false
+        })
+        var displayHeader = document.querySelector("#header");
+        displayHeader.classList.remove("enableHeader");
     }
     render() {
-        console.log(this.state.isAuthed)
+        const isLoggedIn = this.state.isAuthed
         return (
             <div className="login-wrapper">
                 <h1>
                     Hickory Ridge
                 </h1>
-                <form onSubmit={this.handleSubmit}>
-                    <label>
-                        <input type="email" placeholder="Email" value={this.state.email} onChange={this.handleEmail}/>
-                        <input type="password" placeholder="Password" value={this.state.password} onChange={this.handlePassword}/>
-                        <input type="submit" />
-                    </label>
-                </form>
+                <div>
+                {isLoggedIn ? 
+                    <form>
+                        <input type="submit" value="Logout" onClick={this.handleLogout} />
+                    </form> : 
+                    <form onSubmit={this.handleSubmit}>
+                        <label>
+                            <input type="email" placeholder="Email" value={this.state.email} onChange={this.handleEmail}/>
+                            <input type="password" placeholder="Password" value={this.state.password} onChange={this.handlePassword}/>
+                            <input type="submit" />
+                        </label>
+                    </form>
+                }
+                </div>
             </div>
         );
     }

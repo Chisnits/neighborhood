@@ -41,7 +41,7 @@ class Calender extends Component {
             var today = new Date();
             var lastWeek = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 7);
         return (
-            <div className="wrapper">
+            <div className="calender-wrapper">
                 <section className="calender-container">
                     <InfiniteCalendar
                         width={800}
