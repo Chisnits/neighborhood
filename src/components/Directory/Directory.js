@@ -29,8 +29,9 @@ class Directory extends Component {
               item.lastName.toLowerCase().indexOf(query) >= 0 || 
               item.address.toLowerCase().indexOf(query) >= 0 ||
               item.email.toLowerCase().indexOf(query) >= 0 ||
-              item.email2.toLowerCase().indexOf(query) >= 0
-              //need to add search by phone #
+              item.email2.toLowerCase().indexOf(query) >= 0 ||
+              item.phone.toLowerCase().indexOf(query) >= 0
+              
             )
           });
         const data = filteredDirectory.map((item,i) => (
@@ -41,6 +42,7 @@ class Directory extends Component {
                 <h1>{item.address}</h1>
                 <h1>{item.email}</h1>
                 <h1>{item.email2 ? item.email2 : null}</h1>
+                <h1>{item.phone}</h1>
             </div>
         ))
         return (

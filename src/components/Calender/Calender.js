@@ -50,7 +50,7 @@ class Calender extends Component {
                         disabledDays={[]}
                         minDate={lastWeek}
                         onSelect={(date) => {var myDate = Date.parse(date);
-                        console.log(myDate.toString('dddd, MMM yyyy'))}
+                        alert(myDate.toString('dddd, MMM yyyy'))}
                         }
                     />
                 </section>
