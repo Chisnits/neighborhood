@@ -1,3 +1,20 @@
 .directory-wrapper{
     border: 1px solid black;
+    width: 25vw;
+    padding: 20px;
+}
+.directory-wrapper:hover{
+    height: 40vh;
+    width: 40vw;
+    display: flex;
+    font-size: 3em
+}
+.form-container{
+    margin: 0 0 10px 10px;
+}
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
 }

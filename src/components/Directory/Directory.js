@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import directoryData from './directory.json';
+import DirectoryData from './directory.json';
 
 import './styles/Directory.css'
 
@@ -20,7 +20,9 @@ class Directory extends Component {
         })
     }
     render() {
-        const filteredDirectory = directoryData.filter(item => {
+        
+        console.log(this.state.search)
+        const filteredDirectory = DirectoryData.filter(item => {
             const query = this.state.search.toLowerCase();
           
             return (
@@ -47,10 +49,10 @@ class Directory extends Component {
         ))
         return (
             <div>
-                <form onSubmit={this.handleSubmit}>
+                <form className="form-container" onSubmit={this.handleSubmit}>
                     Search: <input className="input" type="input" value={this.state.search} onChange={this.handleSearch}/>
                 </form>
-                <div>
+                <div className="card-container">
                     {data}
                 </div>
             </div>

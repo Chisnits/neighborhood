@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import InfiniteCalendar from 'react-infinite-calendar';
 import 'react-infinite-calendar/styles.css';
 import 'datejs';
+import swal from "sweetalert2/dist/sweetalert2.all.min.js"
 
 import './styles/Calender.css'
 
@@ -15,7 +16,37 @@ class Calender extends Component {
                 location: "Clubhouse"
             },
             {
-                date: "10/3/2017",
+                date: "09/30/2018",
+                title: "Some Event",
+                location: "Clubhouse"
+            },
+            {
+                date: "11/15/2017",
+                title: "Some Event",
+                location: "Clubhouse"
+            },
+            {
+                date: "12/30/2017",
+                title: "Some Event",
+                location: "Clubhouse"
+            },
+            {
+                date: "10/5/2017",
+                title: "Some Event",
+                location: "Clubhouse"
+            },
+            {
+                date: "08/30/2018",
+                title: "Chase's Birthday",
+                location: "Clubhouse"
+            },
+            {
+                date: "02/20/2018",
+                title: "Chase's Birthday",
+                location: "Clubhouse"
+            },
+            {
+                date: "10/3/2018",
                 title: "Megan's Birthday",
                 location: "California"
             },
@@ -25,13 +56,24 @@ class Calender extends Component {
                 location: "Home"
             }
     ]
-    var fixDates = eventList.map(item => {
+    var sortedEventList = eventList.sort(function(a,b) { 
+        return new Date(a.date).getTime() - new Date(b.date).getTime() 
+    });
+    var now = new Date();
+    sortedEventList.map((item,i) => {
         var myDate = Date.parse(item.date);
-        var returnedDate = myDate.toString('dd MMM')
-        item.date = returnedDate
-        return item
+            if (myDate < now) {
+                sortedEventList.splice(item,1)
+            }
     })
-    var list = eventList.map((item,i) => (
+    // var fixDates = eventList.map(item => {
+    //     var myDate = Date.parse(item.date);
+    //     var returnedDate = myDate.toString('dd MMM')
+    //     item.date = returnedDate
+    //     return item
+    // })
+
+    var list = sortedEventList.slice(0,3).map((item,i) => (
         <div key={i} className="event-container">
             <div className="event-date">{item.date}</div>
             <h1 className="event-title">{item.title}</h1>
@@ -50,7 +92,7 @@ class Calender extends Component {
                         disabledDays={[]}
                         minDate={lastWeek}
                         onSelect={(date) => {var myDate = Date.parse(date);
-                        alert(myDate.toString('dddd, MMM yyyy'))}
+                        swal(myDate.toString('dddd, MMM yyyy'))}
                         }
                     />
                 </section>
