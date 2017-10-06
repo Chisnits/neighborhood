@@ -87,7 +87,7 @@ class Calender extends Component {
                 <section className="calender-container">
                     <InfiniteCalendar
                         width={800}
-                        height={550}
+                        height={515}
                         selected={today}
                         disabledDays={[]}
                         minDate={lastWeek}

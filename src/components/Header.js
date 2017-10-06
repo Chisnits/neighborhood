@@ -91,6 +91,7 @@ class Header extends Component {
                 </div>
                 <div className="title-container">
                     <h1 className="title">Hickory Ridge</h1>
+                    <h3>Draper UT, 84020</h3>
                 </div>
                 <div className="login-wrapper">
                     <div>

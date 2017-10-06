@@ -3,11 +3,14 @@
     width: 25vw;
     padding: 20px;
 }
-.directory-wrapper:hover{
+.directory-expand{
     height: 40vh;
     width: 40vw;
     display: flex;
-    font-size: 3em
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 2.3em;
 }
 .form-container{
     margin: 0 0 10px 10px;

@@ -23,4 +23,11 @@
     height: 100%;
     width: 7vw;
     background-color: #448aff;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.event-location{
+    margin-right: 50px;
 }
