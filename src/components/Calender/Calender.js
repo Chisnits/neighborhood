@@ -56,16 +56,16 @@ class Calender extends Component {
                 location: "Home"
             }
     ]
+    var now = new Date();
+    eventList.map((item,i) => {
+        var myDate = Date.parse(item.date);
+            if (myDate < now) {
+                eventList.splice(item,1)
+            }
+    })
     var sortedEventList = eventList.sort(function(a,b) { 
         return new Date(a.date).getTime() - new Date(b.date).getTime() 
     });
-    var now = new Date();
-    sortedEventList.map((item,i) => {
-        var myDate = Date.parse(item.date);
-            if (myDate < now) {
-                sortedEventList.splice(item,1)
-            }
-    })
     // var fixDates = eventList.map(item => {
     //     var myDate = Date.parse(item.date);
     //     var returnedDate = myDate.toString('dd MMM')

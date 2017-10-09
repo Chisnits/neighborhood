@@ -42,3 +42,44 @@
     align-items: center;
     justify-content: center;
 }
+.responsive-menu{
+    font-size: 35px;
+    display: none;
+    width: 10vw;
+}
+@media (max-width: 900px) {
+    .link-wrapper{
+        display: none;
+    }
+    .responsive-menu{
+        /* display: none; */
+        /* align-items: center; */
+    }
+}
+@media (max-width: 700px) {
+    .header-wrapper{
+        display: inline;
+        white-space: normal;
+    }
+    .title-container{
+        width: inherit;
+    }
+    .login-wrapper{
+        width: 100%
+    }
+    .input-field{
+        text-align: center;
+    }
+    .label{
+        display: flex;
+        flex-direction: column;
+    }
+    .responsive-menu{
+        position: absolute;
+        top: 30px;
+        left: 5px;
+    }
+    .title{
+        font-size: 2.5em;
+    }
+}

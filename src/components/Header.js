@@ -67,22 +67,31 @@ class Header extends Component {
         this.setState({
             isAuthed: true
         })
-        var displayLinks = document.querySelector("#links");
-        displayLinks.classList.add("enableLinks");
+        if(window.innerWidth >= 900){
+            var displayLinks = document.querySelector("#desktop-links");
+            displayLinks.classList.add("enableLinks");
+        } else {
+            console.log('working')
+            var displayLinks = document.querySelector("#responsive-links");
+            displayLinks.classList.add("enableLinks");
+        }
     }
     handleLogout(){
         this.setState({
             isAuthed: false,
             shouldRedirect: true
         })
-        var displayHeader = document.querySelector("#links");
+        var displayHeader = document.querySelector("#desktop-links");
         displayHeader.classList.remove("enableLinks");
     }
     render() {
         const isLoggedIn = this.state.isAuthed
         return (
             <div className="header-wrapper">
-                <div className="link-wrapper" id="links">
+                <menu className="responsive-menu" id="responsive-links">
+                    <i className="fa fa-bars" aria-hidden="true"></i>
+                </menu>
+                <div className="link-wrapper" id="desktop-links">
                     <ul className="link-container">
                         <Link className="link" to="/"><li>Home</li></Link>
                         <Link className="link" to="/directory"><li>Directory</li></Link>
@@ -100,9 +109,9 @@ class Header extends Component {
                             <Link to="/"><input type="submit" value="Logout" onClick={this.handleLogout} /> </Link>
                         </form> : 
                         <form onSubmit={this.handleSubmit}>
-                            <label>
-                                <input type="email" placeholder="Email" value={this.state.email} onChange={this.handleEmail}/>
-                                <input type="password" placeholder="Password" value={this.state.password} onChange={this.handlePassword}/>
+                            <label className="label">
+                                <input className="input-field" type="email" placeholder="Email" value={this.state.email} onChange={this.handleEmail}/>
+                                <input className="input-field" type="password" placeholder="Password" value={this.state.password} onChange={this.handlePassword}/>
                                 <input type="submit" />
                             </label>
                         </form>
