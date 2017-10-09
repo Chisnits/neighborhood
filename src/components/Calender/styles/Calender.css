@@ -10,7 +10,7 @@
     justify-content: space-between;
     align-items: center;
     height: 10vh;
-    width: 25vw;
+    width: 500px;
     border: 1px solid black;
 }
 .event-list-container{
@@ -21,7 +21,7 @@
 }
 .event-date{
     height: 100%;
-    width: 7vw;
+    width: 12vw;
     background-color: #448aff;
     font-size: 1.5em;
     display: flex;
@@ -31,8 +31,17 @@
 .event-location{
     margin-right: 50px;
 }
-@media (max-width: 1200px) {
+.event-list-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 1000px) {
     .calender-wrapper{
         flex-direction: column;
+    }
+    .event-container{
+        width: 325px;
     }
 }

@@ -67,14 +67,8 @@ class Header extends Component {
         this.setState({
             isAuthed: true
         })
-        if(window.innerWidth >= 900){
-            var displayLinks = document.querySelector("#desktop-links");
-            displayLinks.classList.add("enableLinks");
-        } else {
-            console.log('working')
-            var displayLinks = document.querySelector("#responsive-links");
-            displayLinks.classList.add("enableLinks");
-        }
+        var displayLinks = document.querySelector("#desktop-links");
+        displayLinks.classList.add("enableLinks");
     }
     handleLogout(){
         this.setState({
@@ -88,9 +82,6 @@ class Header extends Component {
         const isLoggedIn = this.state.isAuthed
         return (
             <div className="header-wrapper">
-                <menu className="responsive-menu" id="responsive-links">
-                    <i className="fa fa-bars" aria-hidden="true"></i>
-                </menu>
                 <div className="link-wrapper" id="desktop-links">
                     <ul className="link-container">
                         <Link className="link" to="/"><li>Home</li></Link>
