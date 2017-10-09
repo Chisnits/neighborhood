@@ -31,3 +31,8 @@
 .event-location{
     margin-right: 50px;
 }
+@media (max-width: 1200px) {
+    .calender-wrapper{
+        flex-direction: column;
+    }
+}
