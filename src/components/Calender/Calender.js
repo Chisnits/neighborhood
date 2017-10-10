@@ -11,7 +11,7 @@ class Calender extends Component {
         const eventList=[
             {
                 date: "09/20/2017",
-                title: "Chase's Birthday",
+                title: "Some Event",
                 location: "Clubhouse"
             },
             {
@@ -36,22 +36,22 @@ class Calender extends Component {
             },
             {
                 date: "08/30/2018",
-                title: "Chase's Birthday",
+                title: "Some Event",
                 location: "Clubhouse"
             },
             {
                 date: "02/20/2018",
-                title: "Chase's Birthday",
+                title: "Some Event",
                 location: "Clubhouse"
             },
             {
                 date: "10/3/2018",
-                title: "Megan's Birthday",
-                location: "California"
+                title: "Some Event",
+                location: "Clubhouse"
             },
             {
                 date: "10/12/2017",
-                title: "Kris's Birthday",
+                title: "Some Event",
                 location: "Home"
             }
     ]
