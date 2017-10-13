@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Header from './components/Header';
 import Directory from './components/Directory/Directory';
 import Calender from './components/Calender/Calender';
+import {unregister} from './registerServiceWorker';
 
 ReactDOM.render(
 <BrowserRouter>
@@ -19,4 +20,5 @@ ReactDOM.render(
     </div>
 </BrowserRouter>, 
 document.getElementById('root'));
-registerServiceWorker();
+// registerServiceWorker();
+unregister();
