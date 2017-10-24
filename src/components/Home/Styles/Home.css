@@ -115,49 +115,49 @@
     box-shadow:	0px 1px 3px 0px rgba(0, 0, 0, .3);
     transition:transform 0.5s ease-out, 0.5s ease;
 }
-/* @media(max-width: 900){
-  .animated-1 {
-    background-image:url('../../../assets/entrance.JPG');
-    background-size: cover;
-    background-repeat: no-repeat;
-    box-shadow:	0px 1px 3px 0px rgba(0, 0, 0, .3);
-      height: 37.5vh;
-      transition:transform 0.5s ease-out, 0.5s ease;
+@media (max-width: 700px){
+  .panels{
+    display: flex;
+    flex-direction: column;
   }
-    .animated-2 {
-    background-image:url('../../../assets/clubhouse.JPG'); 
-    background-position: 30% 65%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    box-shadow:	0px 1px 3px 0px rgba(0, 0, 0, .3);
-      height: 32vh;
-      transition:transform 0.5s ease-out, 0.5s ease;
+  .panel1{
+    height: 37vh;
+    width: 100%;
+  }  
+  .panel2{
+    height: 37vh;
+    width: 100%;
+  }  
+  .panel3{
+    height: 37vh;
+    width: 100%;
+  }  
+  .panel4{
+    height: 37vh;
+    width: 100%;
+  }  
+  .panel5{
+    height: 37vh;
+    width: 100%;
   }
-    .animated-3 {
-    background-image:url('../../../assets/sunset.JPG');
-    background-position: 30% 65%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    box-shadow:	0px 1px 3px 0px rgba(0, 0, 0, .3);
-      height: 32vh;
-      transition:transform 0.5s ease-out, 0.5s ease;
-  }
-    .animated-4 {
-      background-image:url('../../../assets/streetview.JPG'); 
-      background-position: 30% 65%;
-      background-size: cover;
-      background-repeat: no-repeat;
-    box-shadow:	0px 1px 3px 0px rgba(0, 0, 0, .3);
-      height: 32vh;
-      transition:transform 0.5s ease-out, 0.5s ease;
-  }
-    .animated-5 {
-    background-image:url('../../../assets/streetsign.JPG');
-    background-position: 30% 65%;
-    background-size: cover;
-    background-repeat: no-repeat; 
-    box-shadow:	0px 1px 3px 0px rgba(0, 0, 0, .3);
-      height: 32vh;
-      transition:transform 0.5s ease-out, 0.5s ease;
-  }
-} */
+  .animated-1{
+    height: 37vh;
+    width: 100%;
+  }  
+  .animated-2{
+    height: 37vh;
+    width: 100%;
+  }  
+  .animated-3{
+    height: 37vh;
+    width: 100%;
+  }  
+  .animated-4{
+    height: 37vh;
+    width: 100%;
+  }  
+  .animated-5{
+    height: 37vh;
+    width: 100%;
+  }  
+}

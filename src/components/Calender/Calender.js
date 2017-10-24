@@ -117,9 +117,11 @@ class Calender extends Component {
                 {calender}
                 <section className="event-list-wrapper">
                     <div className="event-list-container">{list}</div>
-                    <h3>To Setup a reservation,</h3>
-                    <h3>Please email Roxy Labrum</h3>
-                    <h3>roxylabrum@gmail.com</h3>
+                    <div className="reservation-container">
+                        <h3>To Setup a reservation,</h3>
+                        <h3>Please email Roxy Labrum</h3>
+                        <h3>roxylabrum@gmail.com</h3>
+                    </div>
                 </section>
             </div>
         );
