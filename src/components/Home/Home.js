@@ -15,7 +15,6 @@ class Home extends Component {
     this.togglePanel = this.togglePanel.bind(this)
   }
   togglePanel(e){
-    console.log(e.currentTarget.id)
     if(e.currentTarget.id === "panel1"){
       this.setState({
         condition1: !this.state.condition1
