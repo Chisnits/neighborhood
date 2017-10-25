@@ -4,6 +4,8 @@
     display: flex;
     justify-content: space-evenly;
     white-space: nowrap;
+    position: absolute;
+    top: 0;
 }
 .title-container{
     width: 33.3%;

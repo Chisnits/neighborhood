@@ -1,3 +1,6 @@
+.home-wrapper{
+  padding-top: 16vh;
+}
 .panels{
     display: flex;
     flex-direction: row;
@@ -67,7 +70,7 @@
     background 0.2s;
   }
   .animated-1 {
-    height: 73vh;
+    height: 72.4vh;
     width: 150%;
     background-image:url('../../../assets/entrance.JPG');
     background-position: 30% 30%;
@@ -77,7 +80,7 @@
     transition:transform 0.5s ease-out, 0.5s ease;
 }
   .animated-2 {
-    height: 73vh;
+    height: 72.4vh;
     width: 150%;
     background-image:url('../../../assets/streetview.JPG'); 
     background-position: 30% 65%;
@@ -87,7 +90,7 @@
     transition:transform 0.5s ease-out, 0.5s ease;
 }
   .animated-3 {
-    height: 73vh;
+    height: 72.4vh;
     width: 150%;
     background-image:url('../../../assets/sunset.JPG');
     background-position: 30% 68%;
@@ -97,7 +100,7 @@
     transition:transform 0.5s ease-out, 0.5s ease;
 }
   .animated-4 {
-    height: 73vh;
+    height: 72.4vh;
     width: 150%;
     background-image:url('../../../assets/clubhouse.JPG'); 
     background-position: 30% 65%;
@@ -107,7 +110,7 @@
     transition:transform 0.5s ease-out, 0.5s ease;
 }
   .animated-5 {
-    height: 73vh;
+    height: 72.4vh;
     width: 150%;
     background-image:url('../../../assets/streetsign.JPG');
     background-position: 30% 75%;

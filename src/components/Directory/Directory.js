@@ -48,19 +48,19 @@ class Directory extends Component {
           });
         const data = filteredDirectory.map((item,i) => (
             <div key={i} className="directory-wrapper" id={_.uniqueId("card")} onClick={this.handleClick}>
-                <h1>{item.lastName}</h1>
-                <h1>{item.firstName1}</h1>
-                <h1>{item.firstName2 ? item.firstName2 : null}</h1>
-                <h1>{item.lastName2 ? item.lastName2 : null}</h1>
-                <h1>{item.address}</h1>
-                <h1>{item.email}</h1>
-                <h1>{item.email2 ? item.email2 : null}</h1>
-                <h1>{item.phone}</h1>
-                <h1>{item.phone2 ? item.phone2 : null}</h1>
+                    <h1>{item.lastName}</h1>
+                    <h3>{item.lastName2 ? item.lastName2 : null}</h3>
+                    <h3>{item.firstName1}</h3>
+                    <h3>{item.firstName2 ? item.firstName2 : null}</h3>
+                    <h4>{item.address}</h4>
+                    <h4>{item.email}</h4>
+                    <h4>{item.email2 ? item.email2 : null}</h4>
+                    <h4>{item.phone}</h4>
+                    <h4>{item.phone2 ? item.phone2 : null}</h4>
             </div>
         ))
         return (
-            <div>
+            <div className="directory-wallpaper">
                 <form className="form-container" onSubmit={this.handleSubmit}>
                     Search: <input className="input" type="input" value={this.state.search} onChange={this.handleSearch}/>
                 </form>
