@@ -1,9 +1,13 @@
+input[type='input'],
+textarea {
+  font-size: 16px;
+}
 .directory-wallpaper{
     /* background-image: url('../../../assets/blueSky.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat; */
-    padding-top: 20vh;
+    padding-top: 25vh;
 }
 .directory-wrapper{
     width: 400px;

@@ -20,7 +20,7 @@
 }
 .link-wrapper {
     display: none;
-    width: 33.3%;
+    /* width: 33.3%; */
     justify-content: center;
 }
 .link-container {
@@ -39,20 +39,38 @@
     align-items: center;
 }
 .login-wrapper{
-    width: 33.3%;
+    /* width: 33.3%; */
     display: flex;
     align-items: center;
     justify-content: center;
 }
+input[type='email'],
+input[type='password'],
+textarea {
+  font-size: 16px;
+}
+input[type="submit"]{
+    height: 2.5em;
+}
+input[type="logout"]{
+    height: 2.5em;
+}
+form{
+    text-align: center;
+}
 @media (max-width: 900px) {
     .link-container{
         flex-direction: column;
+        margin-top: 10px;
     }
 }
 @media (max-width: 700px) {
     .header-wrapper{
-        display: inline;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         white-space: normal;
+        height: 25vh;
     }
     .title-container{
         width: inherit;
@@ -69,9 +87,8 @@
         flex-direction: column;
     }
     .link-container{
-        position: absolute;
-        left: 5px;
-        top: 30px;
+        text-align: center;
+        display: flex;
     }
     .title{
         font-size: 2.5em;

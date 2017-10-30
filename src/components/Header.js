@@ -82,13 +82,6 @@ class Header extends Component {
         const isLoggedIn = this.state.isAuthed
         return (
             <div className="header-wrapper">
-                <div className="link-wrapper" id="desktop-links">
-                    <ul className="link-container">
-                        <Link className="link" to="/"><li>Home</li></Link>
-                        <Link className="link" to="/directory"><li>Directory</li></Link>
-                        <Link className="link" to="/calender"><li>Calender</li></Link>
-                    </ul>
-                </div>
                 <div className="title-container">
                     <h1 className="title">Hickory Ridge</h1>
                     <h3>Draper UT, 84020</h3>
@@ -107,6 +100,13 @@ class Header extends Component {
                             </label>
                         </form>
                     }
+                    <div className="link-wrapper" id="desktop-links">
+                    <ul className="link-container">
+                        <Link className="link" to="/"><li>Home</li></Link>
+                        <Link className="link" to="/directory"><li>Directory</li></Link>
+                        <Link className="link" to="/calender"><li>Calender</li></Link>
+                    </ul>
+                </div>
                     </div>
                 </div>
             </div>
