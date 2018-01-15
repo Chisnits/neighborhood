@@ -90,7 +90,6 @@ class Header extends Component {
                     <ul className="link-container">
                         <Link className="link" to="/"><li>Home</li></Link>
                         <Link className="link" to="/directory"><li>Directory</li></Link>
-                        <Link className="link" to="/calender"><li>Calender</li></Link>
                     </ul>
                 </div>
                 <div className="login-wrapper">
@@ -100,11 +99,17 @@ class Header extends Component {
                             <Link to="/"><input type="submit" value="Logout" onClick={this.handleLogout} /> </Link>
                         </form> : 
                         <form onSubmit={this.handleSubmit}>
-                            <label className="label">
-                                <input className="input-field" type="email" placeholder="Email" value={this.state.email} onChange={this.handleEmail}/>
-                                <input className="input-field" type="password" placeholder="Password" value={this.state.password} onChange={this.handlePassword}/>
-                                <input type="submit" />
-                            </label>
+                            <div className="label">
+                                    <label className="input-label">
+                                    <input className="input-field input" type="email" value={this.state.email} onChange={this.handleEmail}/>
+                                        <span className="input-label-content">Email</span>  
+                                    </label>
+                                    <label className="input-label">
+                                    <input className="input-field input" type="password" value={this.state.password} onChange={this.handlePassword}/>
+                                        <span className="input-label-content">Password</span>
+                                    </label>    
+                                    <input className="btn" type="submit" />
+                            </div>
                         </form>
                     }
                     </div>
