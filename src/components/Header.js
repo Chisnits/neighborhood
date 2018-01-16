@@ -96,7 +96,7 @@ class Header extends Component {
                     <div>
                     {isLoggedIn ? 
                         <form>
-                            <Link to="/"><input type="submit" value="Logout" onClick={this.handleLogout} /> </Link>
+                            <Link to="/"><input className="btn" type="submit" value="Logout" onClick={this.handleLogout} /> </Link>
                         </form> : 
                         <form onSubmit={this.handleSubmit}>
                             <div className="label">
