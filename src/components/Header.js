@@ -114,6 +114,7 @@ class Header extends Component {
                         </form> : 
                         <form onSubmit={this.handleSubmit}>
                             <div className="label">
+                                <div className="input-container">
                                     <label className="input-label">
                                     <input id="email" className="input-field input" type="email" value={this.state.email} onChange={this.handleEmail}/>
                                         <span id="email-input" className="input-label-content">Email</span>  
@@ -122,7 +123,8 @@ class Header extends Component {
                                     <input id="password" className="input-field input" type="password" value={this.state.password} onChange={this.handlePassword}/>
                                         <span id="password-input" className="input-label-content">Password</span>
                                     </label>    
-                                    <input className="btn" type="submit" />
+                                </div>
+                                    <input className="home-btn btn" type="submit" />
                             </div>
                         </form>
                     }

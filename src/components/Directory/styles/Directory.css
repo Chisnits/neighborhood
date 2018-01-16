@@ -45,7 +45,29 @@ textarea {
     font-size: 2.3em;
 }
 .form-container{
-    margin: 0 0 10px 10px;
+    margin-bottom: 10vh;
+}
+.search-input{
+    position: relative;
+    right: 9em;
+}
+.input:focus{
+    transform: translate3d(0, 90%, 0);
+    transition: transform 0.5s ease-in-out;
+}
+.input:focus ~ .search-input{
+    position: relative;
+    top: 10px;
+    right: 166px;
+    transition: all .5s ease-in-out;
+}
+.move-input-field{
+    transform: translate3d(0, 90%, 0);
+}
+.move-placeholder{
+    position: relative;
+    top: 10px;
+    right: 166px;
 }
 .card-container{
     display: flex;
