@@ -28,11 +28,25 @@ class Header extends Component {
         }
     }
     handleEmail(e) {
+        var emailId = document.querySelector("#email")
+        if (emailId.type === 'email' && e.target.value.length !== 0){
+            var email = document.querySelector("#email");
+            email.classList.add("move-input-field")
+            var emailInput = document.querySelector("#email-input");
+            emailInput.classList.add("move-placeholder");
+        }
         this.setState({
             email: e.target.value
         })
     }
     handlePassword(e) {
+        var passwordId = document.querySelector("#password")
+        if (passwordId.type === 'password' && e.target.value.length !== 0){
+            var password = document.querySelector("#password");
+            password.classList.add("move-input-field")
+            var passwordInput = document.querySelector("#password-input");
+            passwordInput.classList.add("move-placeholder");
+        }
         this.setState({
             password: e.target.value
         })
@@ -101,12 +115,12 @@ class Header extends Component {
                         <form onSubmit={this.handleSubmit}>
                             <div className="label">
                                     <label className="input-label">
-                                    <input className="input-field input" type="email" value={this.state.email} onChange={this.handleEmail}/>
-                                        <span className="input-label-content">Email</span>  
+                                    <input id="email" className="input-field input" type="email" value={this.state.email} onChange={this.handleEmail}/>
+                                        <span id="email-input" className="input-label-content">Email</span>  
                                     </label>
                                     <label className="input-label">
-                                    <input className="input-field input" type="password" value={this.state.password} onChange={this.handlePassword}/>
-                                        <span className="input-label-content">Password</span>
+                                    <input id="password" className="input-field input" type="password" value={this.state.password} onChange={this.handlePassword}/>
+                                        <span id="password-input" className="input-label-content">Password</span>
                                     </label>    
                                     <input className="btn" type="submit" />
                             </div>
