@@ -45,11 +45,13 @@ textarea {
     font-size: 2.3em;
 }
 .form-container{
+    margin-top: 2vh;
     margin-bottom: 10vh;
 }
 .search-input{
     position: relative;
     right: 9em;
+    z-index: 1;
 }
 .input:focus{
     transform: translate3d(0, 90%, 0);

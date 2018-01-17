@@ -83,6 +83,7 @@ a{
     border-bottom: 4px solid black;
     margin: 10px 0;
     padding: 20px;
+    z-index: 10;
 }
 .input:focus{
     transform: translate3d(0, 90%, 0);
