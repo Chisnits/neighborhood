@@ -100,7 +100,7 @@ class Header extends Component {
                     <h1 className="title">Hickory Ridge</h1>
                     <h3>Draper UT, 84020</h3>
                 </div>
-                <div className="link-wrapper" id="desktop-links">
+                <div className="link-wrapper topBotomBordersOut" id="desktop-links">
                     <ul className="link-container">
                         <Link className="link" to="/"><li>Home</li></Link>
                         <Link className="link" to="/directory"><li>Directory</li></Link>
