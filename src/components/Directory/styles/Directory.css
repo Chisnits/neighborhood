@@ -48,25 +48,34 @@ textarea {
     margin-top: 2vh;
     margin-bottom: 10vh;
 }
-.search-input{
+.directory-input{
+    height: 2em;
+    border: none;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+    margin: 10px 0;
+    padding: 20px;
+    z-index: 10;
+}
+.directory-input:focus{
+    transform: translate3d(0, 90%, 0);
+    transition: transform 0.5s ease-in-out;
+}
+.directory-search-input{
     position: relative;
     right: 9em;
     z-index: 1;
 }
-.input:focus{
-    transform: translate3d(0, 90%, 0);
-    transition: transform 0.5s ease-in-out;
-}
-.input:focus ~ .search-input{
+.directory-input:focus ~ .directory-search-input{
     position: relative;
     top: 10px;
     right: 166px;
     transition: all .5s ease-in-out;
 }
-.move-input-field{
+.directory-move-input-field{
     transform: translate3d(0, 90%, 0);
 }
-.move-placeholder{
+.directory-move-placeholder{
     position: relative;
     top: 10px;
     right: 166px;

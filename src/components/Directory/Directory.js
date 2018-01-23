@@ -17,13 +17,14 @@ class Directory extends Component {
     }
 
     handleSearch(e){
-        var searchId = document.querySelector("#search")
+        var searchId = document.querySelector("#directory-search")
         console.log(searchId)
         if (searchId.type === 'search' && e.target.value.length !== 0){
-            var search = document.querySelector("#search");
-            search.classList.add("move-input-field")
-            var searchInput = document.querySelector("#search-input");
-            searchInput.classList.add("move-placeholder");
+            var search = document.querySelector("#directory-search");
+            search.classList.add("directory-move-input-field")
+            console.log(search)
+            var searchInput = document.querySelector("#directory-search-input");
+            searchInput.classList.add("directory-move-placeholder");
         }
         this.setState({
             search: e.target.value
@@ -70,8 +71,8 @@ class Directory extends Component {
         return (
             <div className="directory-wallpaper">
                 <form className="form-container" onSubmit={this.handleSubmit}>
-                    <input id="search" className="input" type="search" value={this.state.search} onChange={this.handleSearch}/>
-                    <span id="search-input" className="search-input">Search</span>  
+                    <input id="directory-search" className="directory-input" type="search" value={this.state.search} onChange={this.handleSearch}/>
+                    <span id="directory-search-input" className="directory-search-input">Search</span>  
                 </form>
                 <div className="card-container">
                     {data}

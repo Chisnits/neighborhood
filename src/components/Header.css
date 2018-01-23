@@ -49,6 +49,7 @@ a{
     0%{
         border: none;
         background-color: white;
+        
     }
     100%{
     border-top: 2px solid black;
