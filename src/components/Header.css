@@ -40,12 +40,20 @@ a{
     list-style-type: none;
     color: black;
     height: 5em;
-    width: 5em;
+    width: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.5s ease-in-out;
 }
 .link:hover{
-    animation: navigation 0.5s forwards;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    background-color: #fcad26;
+    width: 10em;
 }
-@keyframes navigation {
+/* removed animation, used a transition instead to */
+/* allow the animation a nice flow on hover and off hover. */
+/* @keyframes navigation {
     0%{
         border: none;
         background-color: white;
@@ -55,8 +63,9 @@ a{
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     background-color: #fcad26;
+    width: 10em;
     }
-}
+} */
 .enableLinks{
     display: flex;
     align-items: center;
@@ -76,7 +85,7 @@ a{
     background-color: #fcad26;
     font-size: 16px;
     font-weight: 300px;
-    color: white;
+    color: black;
     text-transform: uppercase;
     letter-spacing: 2px;
     padding: 25px 80px;
