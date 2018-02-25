@@ -20,6 +20,7 @@ class Directory extends Component {
         function onScroll() {
             if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
                 document.getElementById("card-container").className = "slideUp";
+                document.getElementById("prompt").className = "card-container";
             }
         }
     }
@@ -81,7 +82,7 @@ class Directory extends Component {
                     <input id="directory-search" className="directory-input" type="search" value={this.state.search} onChange={this.handleSearch}/>
                     <span id="directory-search-input" className="directory-search-input">Search</span>  
                 </form>
-                    <span className="prompt">Scroll Down!</span>
+                    <span id="prompt" className="prompt">Scroll Down!</span>
                 <div id="card-container" className="card-container">
                     {data}
                 </div>
