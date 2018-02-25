@@ -21,6 +21,7 @@ textarea {
     margin-bottom: 20px;
     white-space: nowrap;
     background-color: white;
+    transition: all 0.2s linear;
 }
 .directory-wrapper h1 {
     font-size: 2em;
@@ -45,8 +46,24 @@ textarea {
     font-size: 2.3em;
 }
 .form-container{
-    margin-top: 2vh;
-    margin-bottom: 10vh;
+    margin: 2vh 0 5vh 2vw;
+}
+.prompt{
+    animation: grow 2s linear infinite;
+    display: flex;
+    justify-content: center;
+    height: 80px;
+}
+@keyframes grow {
+    0%{
+        font-size: 20px;
+    }
+    50%{
+        font-size: 40px;
+    }
+    100%{
+        font-size: 20px;
+    }
 }
 .directory-input{
     height: 2em;
@@ -84,15 +101,12 @@ textarea {
     visibility: hidden;
 }
 .slideUp {
-    animation-name: slideUp;
-    -webkit-animation-name: slideUp;
-    animation-duration: 1s;
-    -webkit-animation-duration: 1s;
     visibility: visible;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    animation: slideUp 1s forwards;
 }
 @keyframes slideUp {
     0% {

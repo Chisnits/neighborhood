@@ -18,7 +18,6 @@ class Directory extends Component {
     componentDidMount(){
         window.onscroll = function() {onScroll()};
         function onScroll() {
-            console.log(document.documentElement.scrollTop)
             if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
                 document.getElementById("card-container").className = "slideUp";
             }
@@ -27,7 +26,6 @@ class Directory extends Component {
 
     handleSearch(e){
         var searchId = document.querySelector("#directory-search")
-        console.log(searchId)
         if (searchId.type === 'search' && e.target.value.length !== 0){
             var search = document.querySelector("#directory-search");
             search.classList.add("directory-move-input-field")
@@ -83,6 +81,7 @@ class Directory extends Component {
                     <input id="directory-search" className="directory-input" type="search" value={this.state.search} onChange={this.handleSearch}/>
                     <span id="directory-search-input" className="directory-search-input">Search</span>  
                 </form>
+                    <span className="prompt">Scroll Down!</span>
                 <div id="card-container" className="card-container">
                     {data}
                 </div>
