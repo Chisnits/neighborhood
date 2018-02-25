@@ -15,6 +15,15 @@ class Directory extends Component {
         this.handleSearch = this.handleSearch.bind(this);
         this.handleClick = this.handleClick.bind(this);
     }
+    componentDidMount(){
+        window.onscroll = function() {onScroll()};
+        function onScroll() {
+            console.log(document.documentElement.scrollTop)
+            if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+                document.getElementById("card-container").className = "slideUp";
+            }
+        }
+    }
 
     handleSearch(e){
         var searchId = document.querySelector("#directory-search")
@@ -74,7 +83,7 @@ class Directory extends Component {
                     <input id="directory-search" className="directory-input" type="search" value={this.state.search} onChange={this.handleSearch}/>
                     <span id="directory-search-input" className="directory-search-input">Search</span>  
                 </form>
-                <div className="card-container">
+                <div id="card-container" className="card-container">
                     {data}
                 </div>
             </div>
